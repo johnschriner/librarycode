@@ -1,0 +1,13 @@
+<form action="http://onesearch.cuny.edu/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" id="simple" method="get" name="searchForm" role="search" target="self">
+<p style="margin-bottom:0.5em;"><input name="institution" type="hidden" value="QB" /> <input name="vid" type="hidden" value="qb" /> <input name="group" type="hidden" value="GUEST" /> <input name="onCampus" type="hidden" value="true" /> <input name="search_scope" type="hidden" value="everything" /> <input id="primoQuery" name="query" type="hidden" /> </p>
+
+<p style="margin-bottom:1em;">&nbsp;&nbsp;&nbsp; <input class="one-edge-shadow" id="primoQueryTemp" name="queryTemp" size="50" type="text" value="" /> <input alt="Search" class="button one-edge-shadow" id="go" onclick="searchPrimo()" title="Search books, articles &amp; more" type="submit" value="Search" /></p>
+
+<p style="margin-bottom:1em;">&nbsp;</p>
+</form>
+<script type="text/javascript">
+function searchPrimo(){
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+</script>
