@@ -1,0 +1,29 @@
+<style type="text/css">.one-edge-shadow { 
+-webkit-box-shadow: 0 8px 6px -4px #556ba2; -moz-box-shadow: 0 8px 6px -4px #556ba2; box-shadow: 0 8px 6px -4px #556ba2; } 
+<!-- trying out pure CSS tabs ### --> 
+.tabs { max-width: 90%; float: none; list-style: none; padding: 0; margin: 75px auto; border-bottom: 4px solid #ccc; } .tabs:after { content: &#39;&#39;; display: table; clear: both; } .tabs input[type=radio] { display:none; } .tabs label { display: block; float: left; width: 50%; font-size: 30px; font-weight: normal; text-decoration: none; text-align: center; line-height: 2; cursor: pointer; box-shadow: inset 0 4px #ccc; border-bottom: 4px solid #ccc; border-right: 4px solid #ccc;border-left: 4px solid #ccc;-webkit-transition: all 0.1s; /* Safari 3.1 to 6.0 */ transition: all 0.1s; } .tabs label span { display: none; } .tabs label i { padding: 1px; margin-right: 0; } .tabs label:hover { box-shadow: inset 0 4px #3498db; border-bottom: 4px solid #3498db; border-right: 4px solid #3498db; border-left: 4px solid #3498db;} .tabs label:active{ box-shadow: inset 0 4px #3498db; border-bottom: 4px solid #3498db; border-right: 4px solid #3498db; border-left: 4px solid #3498db;} .tab-content-sbox { display: none; width: 100%; float: left; padding: 15px; box-sizing: border-box; } .tabs [id^="tab"]:checked + label { box-shadow: inset 0 4px #3498db; border-bottom: 4px solid #3498db; color: #3498db; border-right: 4px solid #3498db; border-left: 4px solid #3498db;} #tab1:checked ~ #tab-content1, #tab2:checked ~ #tab-content2, #tab3:checked ~ #tab-content3 { display: block; } .os-logo { <img alt="" height="42"  data-cke-saved-src="https://s3.amazonaws.com/libapps/customers/219/images/logo-onesearch.png" src="https://s3.amazonaws.com/libapps/customers/219/images/logo-onesearch.png" width="153" />}
+#container-with-bkgd { background: url("https://s3.amazonaws.com/libapps/accounts/86195/images/librarybanner-sm.png") center no-repeat;}
+</style>
+<form action="http://onesearch.cuny.edu/primo_library/libweb/action/dlSearch.do" enctype="application/x-www-form-urlencoded; charset=utf-8" id="simple" method="get" name="searchForm" role="search" target="self">
+<p style="margin-bottom:0.5em;"><input name="institution" type="hidden" value="QB" /> <input name="vid" type="hidden" value="qb" /> <input name="group" type="hidden" value="GUEST" /> <input name="onCampus" type="hidden" value="true" /> <input name="search_scope" type="hidden" value="everything" /> <input id="primoQuery" name="query" type="hidden" /> <img alt="" height="42" src="//s3.amazonaws.com/libapps/customers/219/images/logo-onesearch.png" width="153" /></p>
+
+<p style="margin-bottom:0.5em;"><strong>Use <a href="http://onesearch.cuny.edu/primo_library/libweb/action/search.do?vid=qb" target="_blank">OneSearch</a> if you:</strong></p>
+
+<ul style="list-style-type: circle; margin-left: 3em; margin-bottom:0.5em;">
+	<li>are looking for a specific title, whether an article or a book,</li>
+	<li>want a combination of books, articles, ebooks, etc. on a topic, or</li>
+	<li>are just starting your research.</li>
+</ul>
+
+<p style="margin-bottom:1em;">&nbsp;&nbsp;&nbsp; <input class="one-edge-shadow" id="primoQueryTemp" name="queryTemp" size="50" type="text" value="" /> <input alt="Search" class="button one-edge-shadow" id="go" onclick="searchPrimo()" title="Search books, articles &amp; more" type="submit" value="Search" /></p>
+
+<p style="margin-bottom:1em;"><a href="http://onesearch.cuny.edu/primo_library/libweb/action/search.do?mode=Advanced&amp;ct=AdvancedSearch&amp;vid=qb&amp;dscnt=0&amp;dstmp=1490367862244" target="_blank">Advanced Search</a>  |  <a href="https://cuny-pds-lb.hosted.exlibrisgroup.com/pds?func=load-login&amp;calling_system=primo&amp;institute=QB&amp;lang=eng&amp;url=http://onesearch.cuny.edu:80/primo_library/libweb/action/login.do?targetURL=http://onesearch.cuny.edu/primo_library/libweb/action/myAccountMenu.do?vid=qb&amp;fromLink=gotoMyAccountUI" target="_blank">My Account</a></p>
+
+<p style="margin-bottom:1em;">&nbsp;</p>
+</form>
+<script type="text/javascript">
+function searchPrimo(){
+document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value;
+document.forms["searchForm"].submit();
+}
+</script>
