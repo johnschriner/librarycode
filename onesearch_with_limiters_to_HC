@@ -1,0 +1,36 @@
+<form id="simple" name="searchForm" method="get" target="_self" action="http://onesearch.cuny.edu/primo-explore/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
+<input type="hidden" name="institution" value="QB">
+<input type="hidden" name="vid" value="qb">
+<input type="hidden" name="tab" value="default_tab">
+<input type="hidden" name="search_scope" value="everything">
+<input type="hidden" name="mode" value="Basic">
+<input type="hidden" name="displayMode" value="full">
+<input type="hidden" name="displayField" value="all">
+<input type="hidden" name="bulkSize" value="10">
+<input type="hidden" name="highlight" value="true">
+<input type="hidden" name="dum" value="true">
+<select name="facet">
+ <option value="library,include,QBHOL">Holocaust Center</option>
+ <option value="library,include,QB001">Main Library</option>
+ <option value="library,include,QBRSV">Reserves</option>
+ <option value="library,include,QBREF">Reference</option>
+</select> 
+<select name="facet">
+    <option value="rtype,include,media">Audio Visual</option>
+ <option value="rtype,include,books">Books</option>
+ <option value="rtype,include,articles">Articles</option>
+ <option value="rtype,include,newspaper_articles">Newspaper Articles</option>
+ <option value="rtype,include,reference_entrys">Reference Resources</option>
+ <option value="rtype,include,images">Images</option>
+</select> 
+<input type="text" id="primoQueryTemp" value="" size="35"> 
+
+<input type="hidden" name="query" id="primoQuery">
+<input id="go" title="Search" onclick="searchPrimo()" type="submit" value="Search" alt="Search">
+<script type="text/javascript">
+function searchPrimo() {
+ document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
+ document.forms["searchForm"].submit();
+}
+</script>
+</form>
