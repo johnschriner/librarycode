@@ -1,4 +1,4 @@
-<form id="simple" name="searchQBHOLmedia" method="get" target="_self" action="http://onesearch.cuny.edu/primo-explore/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
+<form id="simple" name="searchQBHOLbooks" method="get" target="_self" action="http://onesearch.cuny.edu/primo-explore/search" enctype="application/x-www-form-urlencoded; charset=utf-8" onsubmit="searchPrimo()">
 <input type="hidden" name="institution" value="QB">
 <input type="hidden" name="vid" value="qb">
 <input type="hidden" name="tab" value="default_tab">
@@ -17,7 +17,7 @@
 <script type="text/javascript">
 function searchPrimo() {
  document.getElementById("primoQuery").value = "any,contains," + document.getElementById("primoQueryTemp").value.replace(/[,]/g, " ");
- document.forms["searchQBHOLmedia"].submit();
+ document.forms["searchQBHOLbooks"].submit();
 }
 </script>
 </form>
